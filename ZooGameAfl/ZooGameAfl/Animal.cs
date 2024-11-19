@@ -6,6 +6,13 @@ using System.Threading.Tasks;
 
 namespace ZooGameAfl
 {
+    public enum Mood
+    {
+        Happy,
+        Neutral,
+        Hungry,
+        Angry
+    }
     public abstract class Animal
     {
         public string Name { get; set; }

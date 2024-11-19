@@ -26,6 +26,12 @@ namespace ZooGameAfl
             UpdateMood();
         }
 
+        public void Feed(int foodAmount)
+        {
+            HungerLevel = Math.Max(0, HungerLevel - foodAmount);
+            UpdateMood();
+        }
+
         private void UpdateMood()
         {
             if (HungerLevel < 30)

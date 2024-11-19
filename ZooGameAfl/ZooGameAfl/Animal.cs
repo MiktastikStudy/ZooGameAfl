@@ -23,9 +23,21 @@ namespace ZooGameAfl
         {
             Name = name;
             HungerLevel = 50;
-            
+            UpdateMood();
         }
 
-        
+        private void UpdateMood()
+        {
+            if (HungerLevel < 30)
+                CurrentMood = Mood.Happy;
+            else if (HungerLevel < 60)
+                CurrentMood = Mood.Neutral;
+            else if (HungerLevel < 90)
+                CurrentMood = Mood.Hungry;
+            else
+                CurrentMood = Mood.Angry;
+        }
+
+
     }
 }

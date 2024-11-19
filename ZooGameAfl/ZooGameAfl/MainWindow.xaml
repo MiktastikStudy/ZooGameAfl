@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ZooGameAfl"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="ZooGameAfl" Height="350" Width="525">
     <Grid>
-
+        
+        <ListBox x:Name="AnimalList" HorizontalAlignment="Left" Height="200" Margin="10,10,0,0" VerticalAlignment="Top" Width="200"/>
+        <Button Content="Feed" HorizontalAlignment="Left" Margin="220,10,0,0" VerticalAlignment="Top" Width="100" Click="FeedButton_Click"/>
+        <Button Content="Info" HorizontalAlignment="Left" Margin="220,50,0,0" VerticalAlignment="Top" Width="100" Click="InfoButton_Click"/>
+        <TextBox x:Name="OutputBox" HorizontalAlignment="Left" Margin="10,220,0,0" VerticalAlignment="Top" Width="480" Height="80" IsReadOnly="True" TextWrapping="Wrap"/>
     </Grid>
 </Window>

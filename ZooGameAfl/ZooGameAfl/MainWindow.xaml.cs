@@ -16,9 +16,20 @@ namespace ZooGameAfl
     /// </summary>
     public partial class MainWindow : Window
     {
+        private List<Animal> animals = new();
         public MainWindow()
         {
             InitializeComponent();
+            LoadAnimals();
+        }
+        private void LoadAnimals()
+        {
+            animals.Add(new Lion("Simba"));
+            animals.Add(new Monkey("George"));
+            animals.Add(new Elephant("Dumbo"));
+
+            AnimalList.ItemsSource = animals;
+            AnimalList.DisplayMemberPath = "Name";
         }
     }
 }
